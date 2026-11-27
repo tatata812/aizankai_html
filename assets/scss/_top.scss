@@ -18,7 +18,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: clamp(16px, 2vw, 28px) 0 60px;
+  padding: clamp(32px, 2vw, 28px) 0 64px;
 
   @include tab {
     padding-bottom: 32px;
@@ -72,7 +72,7 @@
 
   &__slider {
     width: 100%;
-    margin: clamp(24px, 3vw, 48px) auto 0;
+    margin: clamp(72px, 3vw, 48px) auto 0;
 
     @include sp {
       margin-top: 2.5%;
