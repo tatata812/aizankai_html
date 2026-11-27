@@ -32,24 +32,25 @@
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
-  <link rel="stylesheet" href="assets/css/style.css?20260121">
+  <link rel="stylesheet" href="assets/css/style.css?20261128-subpage3">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
-<body>
+<body id="top">
+  <!-- ヘッダー -->
   <header class="site-header">
     <div class="site-header__inner">
       <h1 class="site-header__logo">
-        <a href="/" aria-label="愛山青少年活動推進財団 ホーム">
-          <span class="site-header__logo-label">一般財団法人</span>
-          <span class="site-header__logo-name">愛山青少年活動推進財団</span>
+        <a href="index.html" aria-label="愛山青少年活動推進財団 ホーム">
+          <img src="assets/img/top/logo.webp" alt="一般財団法人 愛山青少年活動推進財団">
         </a>
       </h1>
 
       <nav class="site-header__nav" aria-label="メインメニュー">
         <ul class="site-header__nav-list">
-          <li class="site-header__nav-item site-header__nav-item--home"><a href="/" aria-current="page">ホーム</a></li>
-          <li class="site-header__nav-item site-header__nav-item--about"><a href="#about">財団について</a></li>
+          <li class="site-header__nav-item site-header__nav-item--home"><a href="index.html" aria-current="page">ホーム</a></li>
+          <li class="site-header__nav-item site-header__nav-item--about"><a href="activity.html">財団について</a></li>
           <li class="site-header__nav-item site-header__nav-item--recruit"><a href="#recruit">助成募集</a></li>
           <li class="site-header__nav-item site-header__nav-item--groups"><a href="#groups">助成金交付団体</a></li>
           <li class="site-header__nav-item site-header__nav-item--contact"><a href="#contact">お問い合わせ</a></li>
@@ -62,10 +63,11 @@
     </div>
   </header>
 
+  <!-- SPメニュー -->
   <nav class="sp-menu" id="sp-menu" aria-label="メインメニュー" aria-hidden="true" inert>
     <ul class="sp-menu__list">
-      <li class="sp-menu__item sp-menu__item--home"><a href="/" aria-current="page">ホーム</a></li>
-      <li class="sp-menu__item sp-menu__item--about"><a href="#about">財団について</a></li>
+      <li class="sp-menu__item sp-menu__item--home"><a href="index.html" aria-current="page">ホーム</a></li>
+      <li class="sp-menu__item sp-menu__item--about"><a href="activity.html">財団について</a></li>
       <li class="sp-menu__item sp-menu__item--recruit"><a href="#recruit">助成募集</a></li>
       <li class="sp-menu__item sp-menu__item--groups"><a href="#groups">助成金交付団体</a></li>
       <li class="sp-menu__item sp-menu__item--contact"><a href="#contact">お問い合わせ</a></li>
@@ -73,7 +75,166 @@
   </nav>
   <button class="sp-menu__overlay" type="button" aria-label="メニューを閉じる" tabindex="-1" aria-hidden="true"></button>
 
-  <main></main>
-  <script src="assets/js/main.js"></script>
+  <!-- トップページ -->
+  <main class="main">
+    <!-- メインビジュアル -->
+    <section class="mainvisual" aria-label="財団の活動">
+      <img class="mainvisual__background mainvisual__background--top" src="assets/img/top/mv-background-top.webp" alt="" aria-hidden="true">
+      <img class="mainvisual__background mainvisual__background--bottom" src="assets/img/top/mv-background-bottom.webp" alt="" aria-hidden="true">
+      <div class="mainvisual__inner">
+        <picture class="mainvisual__copy">
+          <source media="(max-width: 600px)" srcset="assets/img/top/mv-copy-sp.webp">
+          <img src="assets/img/top/mv-copy.webp" alt="ふるさと山口を愛し、心身共にたくましい青少年の育成事業を応援します">
+        </picture>
+        <div class="mainvisual__slider" aria-label="活動写真">
+          <div class="mainvisual__slide">
+            <img src="assets/img/top/mv-kagura.webp" alt="地域の伝統芸能、神楽を披露する子どもたち" fetchpriority="high">
+          </div>
+          <div class="mainvisual__slide">
+            <img src="assets/img/top/mv-bouldering.webp" alt="ボルダリングに挑戦する子ども">
+          </div>
+          <div class="mainvisual__slide">
+            <img src="assets/img/top/mv-soccer.webp" alt="サッカーに取り組む子ども">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 助成金の交付手続き -->
+    <section class="support-flow" aria-labelledby="support-flow-title">
+      <img class="support-flow__background support-flow__background--left" src="assets/img/top/support-flow-bg-left.webp" alt="" aria-hidden="true">
+      <img class="support-flow__background support-flow__background--right" src="assets/img/top/support-flow-bg-right.webp" alt="" aria-hidden="true">
+      <div class="support-flow__inner">
+        <h2 class="support-flow__title" id="support-flow-title">助成金の交付手続きについて</h2>
+        <img class="support-flow__decoration" src="assets/img/top/support-flow-title-decoration.webp" alt="" aria-hidden="true">
+        <p class="support-flow__text">助成金の交付を受けたい場合や<br>交付を受けたあとでの提出書類（内容変更や報告書など）について</p>
+        <div class="support-flow__links">
+          <a class="support-flow__link" href="#recruit">
+            <img src="assets/img/top/support-flow-recipient.webp" alt="助成金の交付を受けたい場合：募集要綱">
+          </a>
+          <a class="support-flow__link" href="#groups">
+            <img src="assets/img/top/support-flow-report.webp" alt="助成金の交付を受けたあと：助成金交付団体の方へ">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ニュース -->
+    <section class="news" aria-labelledby="news-title">
+      <div class="news__inner">
+        <h2 class="news__title" id="news-title">ニュース</h2>
+        <img class="news__decoration" src="assets/img/top/support-flow-title-decoration.webp" alt="" aria-hidden="true">
+        <div class="news__panel">
+          <nav class="news__categories" aria-label="ニュースカテゴリー">
+            <button class="news__category is-active" type="button" data-news-filter="all" aria-pressed="true">すべて<span class="news__category-dot" aria-hidden="true"></span></button>
+            <button class="news__category" type="button" data-news-filter="notice" aria-pressed="false">お知らせ<span class="news__category-dot" aria-hidden="true"></span></button>
+            <button class="news__category" type="button" data-news-filter="grant" aria-pressed="false">助成金事業<span class="news__category-dot" aria-hidden="true"></span></button>
+            <button class="news__category" type="button" data-news-filter="entry" aria-pressed="false">参加者募集<span class="news__category-dot" aria-hidden="true"></span></button>
+            <button class="news__category" type="button" data-news-filter="group" aria-pressed="false">活動団体情報<span class="news__category-dot" aria-hidden="true"></span></button>
+          </nav>
+          <ul class="news__list">
+            <li class="news__item" data-news-category="notice">
+              <a class="news__item-link" href="#news-detail-1">
+                <span class="news__tag">お知らせ</span><time class="news__date" datetime="2026-06-03">2026.06.03</time><span class="news__item-title">令和８年度の助成金交付決定団体のお知らせ</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="news__item" data-news-category="entry">
+              <a class="news__item-link" href="#news-detail-2">
+                <span class="news__tag">参加者募集</span><time class="news__date" datetime="2026-02-19">2026.02.19</time><span class="news__item-title">「第17回しゃくなげマラソン大会」参加者募集のお知らせ</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="news__item" data-news-category="grant">
+              <a class="news__item-link" href="#news-detail-3">
+                <span class="news__tag">助成金事業</span><time class="news__date" datetime="2026">2026.00.00</time><span class="news__item-title">ここにタイトルが入ります</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="news__item" data-news-category="grant">
+              <a class="news__item-link" href="#news-detail-4">
+                <span class="news__tag">助成金事業</span><time class="news__date" datetime="2026">2026.00.00</time><span class="news__item-title">ここにタイトルが入ります</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="news__item" data-news-category="grant">
+              <a class="news__item-link" href="#news-detail-5">
+                <span class="news__tag">助成金事業</span><time class="news__date" datetime="2026">2026.00.00</time><span class="news__item-title">ここにタイトルが入ります</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="news__item" data-news-category="grant">
+              <a class="news__item-link" href="#news-detail-6">
+                <span class="news__tag">助成金事業</span><time class="news__date" datetime="2026">2026.00.00</time><span class="news__item-title">ここにタイトルが入ります</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="news__more-wrap">
+            <a class="button news__more" href="#news-list">すべてのニュース一覧へ<span class="button__arrow" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 活動報告 -->
+    <section class="activity-report" aria-labelledby="activity-report-title">
+      <img class="activity-report__background activity-report__background--left" src="assets/img/top/support-flow-bg-left.webp" alt="" aria-hidden="true">
+      <img class="activity-report__background activity-report__background--right" src="assets/img/top/support-flow-bg-right.webp" alt="" aria-hidden="true">
+      <div class="activity-report__inner">
+        <h2 class="activity-report__title" id="activity-report-title">活動報告</h2>
+        <img class="activity-report__decoration" src="assets/img/top/support-flow-title-decoration.webp" alt="" aria-hidden="true">
+        <div class="activity-report__cards">
+          <a class="activity-report__card" href="#activity-report-1">
+            <img class="activity-report__image" src="assets/img/top/activity-report-planting.jpg" alt="子どもたちが大人と一緒に植物を植える活動">
+            <span class="activity-report__caption"><span class="activity-report__caption-text">ここにタイトルが入ります。</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span></span>
+          </a>
+          <a class="activity-report__card" href="#activity-report-2">
+            <img class="activity-report__image" src="assets/img/top/activity-report-night-baseball.jpg" alt="夜のグラウンドで練習する野球チーム">
+            <span class="activity-report__caption"><span class="activity-report__caption-text">ここにタイトルが入ります。</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span></span>
+          </a>
+          <a class="activity-report__card" href="#activity-report-3">
+            <img class="activity-report__image" src="assets/img/top/activity-report-mascot.jpg" alt="手作りの羊のマスコット">
+            <span class="activity-report__caption"><span class="activity-report__caption-text">ここにタイトルが入ります。</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span></span>
+          </a>
+          <a class="activity-report__card" href="#activity-report-4">
+            <img class="activity-report__image" src="assets/img/top/activity-report-basketball.jpg" alt="体育館でバスケットボールの練習をする子どもたち">
+            <span class="activity-report__caption"><span class="activity-report__caption-text">ここにタイトルが入ります。</span><span class="button__arrow button__arrow--muted" aria-hidden="true"></span></span>
+          </a>
+        </div>
+        <div class="activity-report__more-wrap">
+          <a class="button" href="#activity-report-list">活動報告一覧へ<span class="button__arrow" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <div class="site-footer__inner">
+        <address class="site-footer__contact">
+          <a class="site-footer__logo" href="index.html" aria-label="愛山青少年活動推進財団 ホーム">
+            <img src="assets/img/top/logo.webp" alt="一般財団法人 愛山青少年活動推進財団">
+          </a>
+          <p class="site-footer__address">〒753-0083<br>山口県山口市後河原 25 番地</p>
+          <p class="site-footer__phone">TEL <a href="tel:0839322660">083-932-2660</a></p>
+          <p class="site-footer__fax">FAX <span>083-932-2659</span></p>
+        </address>
+        <nav class="site-footer__nav" aria-label="フッターメニュー">
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="activity.html">財団について</a></li>
+            <li><a href="#recruit">助成募集</a></li>
+            <li><a href="#groups">助成金交付団体</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="https://www.aizankai.com/sitemap.html">サイトマップ</a></li>
+            <li><a href="#privacy">個人情報保護方針</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__shortcuts">
+          <a href="#recruit">助成金の交付を受けたい場合<br>→（募集要項）</a>
+          <a href="#groups">助成金の交付を受けたあとの書類提出<br>→（助成金交付団体の方へ）</a>
+        </div>
+        <a class="site-footer__page-top" href="#top"><span>ページ<br>TOPへ</span></a>
+      </div>
+    </div>
+    <small class="site-footer__copyright">Copyright © 2009 aizan All Rights Reserved.</small>
+  </footer>
+  <script src="assets/js/main.js?20261128-subpage3"></script>
 </body>
 </html>

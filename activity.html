@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <title>財団活動の紹介 | 愛山会</title>
+  <meta name="description" content="財団活動の紹介 | 愛山会">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;800&family=Noto+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20261128-subpage4">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body id="top">
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <h1 class="site-header__logo">
+        <a href="index.html" aria-label="愛山青少年活動推進財団 ホーム">
+          <img src="assets/img/top/logo.webp" alt="一般財団法人 愛山青少年活動推進財団">
+        </a>
+      </h1>
+
+      <nav class="site-header__nav" aria-label="メインメニュー">
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item site-header__nav-item--home"><a href="index.html">ホーム</a></li>
+          <li class="site-header__nav-item site-header__nav-item--about"><a href="activity.html" aria-current="page">財団について</a></li>
+          <li class="site-header__nav-item site-header__nav-item--recruit"><a href="grant.html">助成募集</a></li>
+          <li class="site-header__nav-item site-header__nav-item--groups"><a href="grant_organization.html">助成金交付団体</a></li>
+          <li class="site-header__nav-item site-header__nav-item--contact"><a href="mailform/contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <button class="site-header__menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="sp-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SPメニュー -->
+  <nav class="sp-menu" id="sp-menu" aria-label="メインメニュー" aria-hidden="true" inert>
+    <ul class="sp-menu__list">
+      <li class="sp-menu__item sp-menu__item--home"><a href="index.html">ホーム</a></li>
+      <li class="sp-menu__item sp-menu__item--about"><a href="activity.html" aria-current="page">財団について</a></li>
+      <li class="sp-menu__item sp-menu__item--recruit"><a href="grant.html">助成募集</a></li>
+      <li class="sp-menu__item sp-menu__item--groups"><a href="grant_organization.html">助成金交付団体</a></li>
+      <li class="sp-menu__item sp-menu__item--contact"><a href="mailform/contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  <button class="sp-menu__overlay" type="button" aria-label="メニューを閉じる" tabindex="-1" aria-hidden="true"></button>
+
+  <!-- 財団活動の紹介ページ：メインビジュアル -->
+  <main class="main" id="about">
+    <section class="mainvisual about-hero" aria-labelledby="about-title">
+      <img class="mainvisual__background mainvisual__background--top" src="assets/img/top/mv-background-top.webp" alt="" aria-hidden="true">
+      <div class="mainvisual__inner about-hero__inner">
+        <picture class="mainvisual__copy about-hero__copy">
+          <source media="(max-width: 600px)" srcset="assets/img/top/mv-copy-sp.webp">
+          <img src="assets/img/top/mv-copy.webp" alt="ふるさと山口を愛し、心身共にたくましい青少年の育成事業を応援します">
+        </picture>
+        <h1 class="about-hero__title" id="about-title">財団について</h1>
+        <nav class="about-hero__nav" aria-label="財団についてのメニュー">
+          <ul class="about-hero__nav-list">
+            <li><a href="activity.html" aria-current="page">財団活動の紹介</a></li>
+            <li><a href="foundation_prospectus.html">設立趣旨</a></li>
+            <li><a href="foundation.html">財団概要</a></li>
+            <li><a href="foundation_staff.html">財団役員</a></li>
+            <li><a href="foundation_history.html">変遷・沿革</a></li>
+            <li><a href="foundation_access.html">アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 財団活動の紹介 -->
+    <section class="foundation-intro" aria-labelledby="foundation-intro-title">
+      <img class="foundation-intro__background foundation-intro__background--left" src="assets/img/top/support-flow-bg-left.webp" alt="" aria-hidden="true">
+      <img class="foundation-intro__background foundation-intro__background--right" src="assets/img/top/support-flow-bg-right.webp" alt="" aria-hidden="true">
+      <div class="foundation-intro__inner">
+        <h2 class="foundation-intro__title" id="foundation-intro-title">財団活動の紹介</h2>
+        <img class="foundation-intro__decoration" src="assets/img/top/support-flow-title-decoration.webp" alt="" aria-hidden="true">
+        <div class="foundation-intro__content">
+          <div class="foundation-intro__text">
+            <p>一般財団法人「愛山青少年活動推進財団」は、平成6年5月、戦争の犠牲となった者の子女の育英援護を目的とした（財）愛山会の解散を受けて、その財産を継承し、「ふるさと山口を愛し、心身共にたくましい青少年の育成を支援すること」を目的とした法人として発足しました。</p>
+            <p>愛山青少年活動推進財団は、21世紀を担う防長の青少年が、輝かしい歴史と伝統を学び受け継ぎ、郷土を愛するたくましい若者に育つことを願って、</p>
+            <ol class="foundation-intro__list">
+              <li>たくましい心身を具備した青少年を育成するための野外活動等各種の活動</li>
+              <li>山口県に関わる先賢の顕彰及び歴史の伝承普及のための活動</li>
+              <li>前各号に定める事業を行う団体に対する助成</li>
+            </ol>
+            <p>などの事業を行って、微力ながら郷土の発展に寄与する所存であります。</p>
+          </div>
+          <figure class="foundation-intro__figure">
+            <img class="foundation-intro__image" src="assets/img/subpage/foundation/foundation-img03.png" alt="防長武学生養成所跡碑" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 理事長あいさつ -->
+    <section class="foundation-greeting" aria-labelledby="foundation-greeting-title">
+      <div class="foundation-greeting__inner">
+        <h2 class="foundation-greeting__title" id="foundation-greeting-title">理事長あいさつ</h2>
+        <img class="foundation-greeting__decoration" src="assets/img/top/support-flow-title-decoration.webp" alt="" aria-hidden="true">
+        <div class="foundation-greeting__panel">
+          <h3 class="foundation-greeting__subtitle">就任のご挨拶</h3>
+          <p>この度、理事の任期満了による改選により、引き続き理事長に再任されました。</p>
+          <p>当財団は、「ふるさと山口を愛し、心身ともにたくましい青少年の育成事業の支援」を目的としており、県内で青少年の健全育成に携わっておられる団体に助成金を交付し、ご支援をさせていただいております。</p>
+          <p>皆様のご期待に添えますよう一層尽力してまいりますので、今後ともご理解とご協力を賜りますよう、よろしくお願いいたします。</p>
+          <p class="foundation-greeting__date">令和8年5月</p>
+          <p class="foundation-greeting__signature">一般財団法人 愛山青少年活動推進財団<br>理事長　須山 和惠</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <div class="site-footer__inner">
+        <address class="site-footer__contact">
+          <a class="site-footer__logo" href="index.html" aria-label="愛山青少年活動推進財団 ホーム">
+            <img src="assets/img/top/logo.webp" alt="一般財団法人 愛山青少年活動推進財団">
+          </a>
+          <p class="site-footer__address">〒753-0083<br>山口県山口市後河原 25 番地</p>
+          <p class="site-footer__phone">TEL <a href="tel:0839322660">083-932-2660</a></p>
+          <p class="site-footer__fax">FAX <span>083-932-2659</span></p>
+        </address>
+        <nav class="site-footer__nav" aria-label="フッターメニュー">
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="activity.html">財団について</a></li>
+            <li><a href="grant.html">助成募集</a></li>
+            <li><a href="grant_organization.html">助成金交付団体</a></li>
+            <li><a href="mailform/contact.html">お問い合わせ</a></li>
+            <li><a href="https://www.aizankai.com/sitemap.html">サイトマップ</a></li>
+            <li><a href="privacy.html">個人情報保護方針</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__shortcuts">
+          <a href="grant.html">助成金の交付を受けたい場合<br>→（募集要項）</a>
+          <a href="grant_organization.html">助成金の交付を受けたあとの書類提出<br>→（助成金交付団体の方へ）</a>
+        </div>
+        <a class="site-footer__page-top" href="#top"><span>ページ<br>TOPへ</span></a>
+      </div>
+    </div>
+    <small class="site-footer__copyright">Copyright © 2009 aizan All Rights Reserved.</small>
+  </footer>
+  <script src="assets/js/main.js?20261128-subpage3"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <title>助成募集 | 愛山会</title>
+  <meta name="description" content="助成募集 | 愛山会">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;800&family=Noto+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20261128-grant10">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body id="top">
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <h1 class="site-header__logo">
+        <a href="index.html" aria-label="愛山青少年活動推進財団 ホーム">
+          <img src="assets/img/top/logo.webp" alt="一般財団法人 愛山青少年活動推進財団">
+        </a>
+      </h1>
+
+      <nav class="site-header__nav" aria-label="メインメニュー">
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item site-header__nav-item--home"><a href="index.html">ホーム</a></li>
+          <li class="site-header__nav-item site-header__nav-item--about"><a href="activity.html">財団について</a></li>
+          <li class="site-header__nav-item site-header__nav-item--recruit"><a href="grant.html" aria-current="page">助成募集</a></li>
+          <li class="site-header__nav-item site-header__nav-item--groups"><a href="grant_organization.html">助成金交付団体</a></li>
+          <li class="site-header__nav-item site-header__nav-item--contact"><a href="mailform/contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <button class="site-header__menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="sp-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SPメニュー -->
+  <nav class="sp-menu" id="sp-menu" aria-label="メインメニュー" aria-hidden="true" inert>
+    <ul class="sp-menu__list">
+      <li class="sp-menu__item sp-menu__item--home"><a href="index.html">ホーム</a></li>
+      <li class="sp-menu__item sp-menu__item--about"><a href="activity.html">財団について</a></li>
+      <li class="sp-menu__item sp-menu__item--recruit"><a href="grant.html" aria-current="page">助成募集</a></li>
+      <li class="sp-menu__item sp-menu__item--groups"><a href="grant_organization.html">助成金交付団体</a></li>
+      <li class="sp-menu__item sp-menu__item--contact"><a href="mailform/contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  <button class="sp-menu__overlay" type="button" aria-label="メニューを閉じる" tabindex="-1" aria-hidden="true"></button>
+
+  <!-- 助成募集ページ -->
+  <main class="main" id="recruit">
+    <!-- 助成募集ページ：メインビジュアル -->
+    <section class="mainvisual about-hero grant-hero" aria-labelledby="grant-title">
+      <img class="mainvisual__background mainvisual__background--top" src="assets/img/top/mv-background-top.webp" alt="" aria-hidden="true">
+      <div class="mainvisual__inner about-hero__inner">
+        <picture class="mainvisual__copy">
+          <source media="(max-width: 600px)" srcset="assets/img/top/mv-copy-sp.webp">
+          <img src="assets/img/top/mv-copy.webp" alt="ふるさと山口を愛し、心身共にたくましい青少年の育成事業を応援します">
+        </picture>
+        <h1 class="about-hero__title" id="grant-title">助成募集</h1>
+        <nav class="about-hero__nav" aria-label="助成募集のメニュー">
+          <ul class="about-hero__nav-list grant-hero__nav-list">
+            <li><a href="#grant-guideline" aria-current="page">募集要綱</a></li>
+            <li><a href="#grant-documents">申請書類・関係書類のダウンロード</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 募集要綱 -->
+    <section class="grant-guideline" id="grant-guideline" aria-labelledby="grant-guideline-title">
+      <img class="grant-guideline__background grant-guideline__background--left" src="assets/img/subpage/grant/grant-guideline-bg-left.webp" alt="" aria-hidden="true">
+      <img class="grant-guideline__background grant-guideline__background--right" src="assets/img/subpage/grant/grant-guideline-bg-right.webp" alt="" aria-hidden="true">
+      <div class="grant-guideline__inner">
+        <h2 class="grant-guideline__title" id="grant-guideline-title">募集要綱</h2>
+        <img class="grant-guideline__decoration" src="assets/img/subpage/grant/grant-guideline-title-decoration.webp" alt="" aria-hidden="true">
+        <p class="grant-guideline__lead">助成金の申請にあたっては、<br>募集要綱に記載された助成の目的、対象要件、申請方法等をご確認いただき、<br>必要書類を添えてご申請くださいますようお願いいたします。</p>
+      </div>
+    </section>
+
+    <!-- 募集要綱本文 -->
+    <section class="grant-details" aria-label="助成募集要綱">
+      <div class="grant-details__inner">
+        <section class="grant-details__block" aria-labelledby="grant-purpose-title">
+          <h3 class="grant-details__heading" id="grant-purpose-title">趣旨</h3>
+          <p>一般財団法人「愛山青少年活動推進財団」は、新しい時代を拓く子供達が、スポーツなどの体験活動や地域の自然や社会、歴史や文化に関わる体験活動を通じて心身共に健全に成長されることを願い、県内諸団体が自主的に県内で実施する青少年育成事業に対し、事業費の一部を助成するものです。</p>
+        </section>
+
+        <section class="grant-details__block" aria-labelledby="grant-target-title">
+          <h3 class="grant-details__heading" id="grant-target-title">助成の対象事業</h3>
+          <p>数年次にわたって継続的に行われる下記に該当する事業のうち、令和8年4月1日から令和9年3月31日までに実施されるものとします。</p>
+          <p class="grant-details__subheading">心身共にたくましい青少年を育成するための活動に関する事業</p>
+          <ol class="grant-details__parenthesized-list">
+            <li>スポーツやさまざま体育活動などによる健全育成事業<strong class="grant-details__emphasis">（中学校の部活動移行クラブは対象外）</strong></li>
+            <li>奉仕・道徳、社会・自然などの体験活動による徳性や感性の涵養に関わる事業</li>
+          </ol>
+          <p class="grant-details__subheading">山口県に関わる先賢の顕彰、歴史の伝承普及のための活動に関する事業</p>
+          <ol class="grant-details__parenthesized-list">
+            <li>先賢の顕彰や郷土の歴史、文化、人物などに関する研究事業</li>
+            <li>ふるさとの風俗・習慣、伝統芸能などの伝承普及事業</li>
+          </ol>
+        </section>
+
+        <section class="grant-details__block" aria-labelledby="grant-ineligible-title">
+          <h3 class="grant-details__heading" id="grant-ineligible-title">助成の対象とならない事業</h3>
+          <p>次のいずれかに該当するものは対象となりません。</p>
+          <ol>
+            <li>営利を目的とした事業</li>
+            <li>宗教活動を目的とした事業</li>
+            <li>政治上の問題に関連する事業</li>
+            <li>助成対象事業への青少年の参加者が原則として10名未満の事業</li>
+            <li>学校の授業や行事の一環として行う事業</li>
+            <li>国・県・市・町から委託を受けて行う事業</li>
+          </ol>
+        </section>
+
+        <section class="grant-details__block" aria-labelledby="grant-amount-title">
+          <h3 class="grant-details__heading" id="grant-amount-title">助成金額及び交付の条件</h3>
+          <ol>
+            <li>助成金の額は、当財団の年度予算の範囲内で、上記2に定める事業に要する総経費の<strong class="grant-details__emphasis">3分の1以内</strong>とし、原則として<strong class="grant-details__emphasis">10万円以内</strong>とします。</li>
+            <li>事業を実施するために必要なパンフレット等の諸資料、看板等に財団名を必ず記載して、当財団の助成事業であることを周知させてください。</li>
+            <li>毎年継続実施する事業の助成については、<strong class="grant-details__emphasis">原則として3年間</strong>を限度とします。</li>
+          </ol>
+        </section>
+
+        <section class="grant-details__block" aria-labelledby="grant-application-title">
+          <h3 class="grant-details__heading" id="grant-application-title">助成金の申請方法</h3>
+          <ol>
+            <li>助成金の交付を希望する団体は、募集要項・交付要綱・申請書等についての内容を確認して同意の上、交付要綱に規定する青少年健全育成事業助成金交付申請書（第1号様式）を締切日までに提出してください。</li>
+            <li>交付要綱・交付申請書・申請書の記入についてなどは、財団のホームページからダウンロードできますが、郵送を希望する団体は、電話連絡等により申し出てください。</li>
+          </ol>
+          <a class="grant-details__download-link" href="grant_download.html"><span class="grant-details__download-label">関係書類<br>ダウンロードページへ</span><span class="grant-details__download-icon" aria-hidden="true"></span></a>
+          <ol start="3">
+            <li>提出いただいた申請書類等は返却しませんので、ご了承ください。</li>
+          </ol>
+        </section>
+
+        <section class="grant-details__block" aria-labelledby="grant-selection-title">
+          <h3 class="grant-details__heading" id="grant-selection-title">助成金の交付決定・結果通知</h3>
+          <ol>
+            <li>5月下旬に開催する財団の選考会で、助成交付団体及び助成金額を決定し、その結果を6月上旬に文書でお知らせします。</li>
+            <li>助成交付決定団体については、財団ホームページに掲載します。</li>
+            <li>不採択の理由についてのお問い合わせには応じかねます。</li>
+          </ol>
+        </section>
+
+        <section class="grant-details__block" aria-labelledby="grant-deadline-title">
+          <h3 class="grant-details__heading" id="grant-deadline-title">申請の締切日</h3>
+          <p><strong class="grant-details__emphasis">令和8年4月20日（月）16：00必着（期限厳守のこと）</strong></p>
+        </section>
+
+        <section class="grant-details__block" aria-labelledby="grant-contact-title">
+          <h3 class="grant-details__heading" id="grant-contact-title">申請書の提出・問い合わせ先</h3>
+          <p class="grant-details__contact-lead">ご不明な点等ございましたら、下記電話・FAX・E-mailでお問い合わせください。</p>
+          <address>〒753-0083 山口県山口市後河原25番地（愛山会ビル3階）<br>（一財）愛山青少年活動推進財団 事務局<br>Tel：<a href="tel:0839322660">083-932-2660</a>　Fax：<span class="grant-details__contact-highlight">083-932-2659</span><br>E-mail　<a href="mailto:aizan@kdp.biglobe.ne.jp">aizan@kdp.biglobe.ne.jp</a><br>【担当】事務局長 古川</address>
+        </section>
+      </div>
+    </section>
+
+    <section class="grant-documents" id="grant-documents" aria-labelledby="grant-documents-title">
+      <p class="grant-documents__note" id="grant-documents-title">印刷またはオフラインでの確認にご利用ください</p>
+      <div class="grant-documents__grid">
+        <article class="grant-document">
+          <h4>パンフレット</h4>
+          <p>助成金に関する概要を載せています</p>
+          <a class="grant-document__preview" href="https://www.aizankai.com/pdf/josei_2026.pdf" target="_blank" rel="noopener">
+            <img src="assets/img/subpage/grant/grant-pamphlet-thumbnail.webp" alt="助成金募集パンフレット">
+          </a>
+          <a class="grant-document__download" href="https://www.aizankai.com/pdf/josei_2026.pdf" target="_blank" rel="noopener">
+            <span>令和8年度助成金募集（PDF）<br>をダウンロード</span>
+            <img src="assets/img/subpage/grant/grant-download-icon.webp" alt="">
+          </a>
+        </article>
+        <article class="grant-document">
+          <h4>助成金交付要綱</h4>
+          <p>交付要綱を3ページにまとめています</p>
+          <a class="grant-document__preview" href="https://www.aizankai.com/pdf/2026-documents.pdf?20251224=" target="_blank" rel="noopener">
+            <img src="assets/img/subpage/grant/grant-guidelines-thumbnail.webp" alt="助成金交付要綱">
+          </a>
+          <a class="grant-document__download" href="https://www.aizankai.com/pdf/2026-documents.pdf?20251224=" target="_blank" rel="noopener">
+            <span>助成金交付要綱（PDF）<br>をダウンロード</span>
+            <img src="assets/img/subpage/grant/grant-download-icon.webp" alt="">
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <div class="site-footer__inner">
+        <address class="site-footer__contact">
+          <a class="site-footer__logo" href="index.html" aria-label="愛山青少年活動推進財団 ホーム">
+            <img src="assets/img/top/logo.webp" alt="一般財団法人 愛山青少年活動推進財団">
+          </a>
+          <p class="site-footer__address">〒753-0083<br>山口県山口市後河原 25 番地</p>
+          <p class="site-footer__phone">TEL <a href="tel:0839322660">083-932-2660</a></p>
+          <p class="site-footer__fax">FAX <span>083-932-2659</span></p>
+        </address>
+        <nav class="site-footer__nav" aria-label="フッターメニュー">
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="activity.html">財団について</a></li>
+            <li><a href="grant.html">助成募集</a></li>
+            <li><a href="grant_organization.html">助成金交付団体</a></li>
+            <li><a href="mailform/contact.html">お問い合わせ</a></li>
+            <li><a href="https://www.aizankai.com/sitemap.html">サイトマップ</a></li>
+            <li><a href="privacy.html">個人情報保護方針</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__shortcuts">
+          <a href="grant.html">助成金の交付を受けたい場合<br>→（募集要項）</a>
+          <a href="grant_organization.html">助成金の交付を受けたあとの書類提出<br>→（助成金交付団体の方へ）</a>
+        </div>
+        <a class="site-footer__page-top" href="#top"><span>ページ<br>TOPへ</span></a>
+      </div>
+    </div>
+    <small class="site-footer__copyright">Copyright © 2009 aizan All Rights Reserved.</small>
+  </footer>
+  <script src="assets/js/main.js?20261128-grant3"></script>
+</body>
+</html>
