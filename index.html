@@ -34,82 +34,46 @@
   <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
   <link rel="stylesheet" href="assets/css/style.css?20260121">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
 </head>
-
-
-
-<body class="wrap">
+<body>
   <header class="site-header">
     <div class="site-header__inner">
-      <!-- ロゴ -->
       <h1 class="site-header__logo">
-        <a href="/">Site Title</a>
+        <a href="/" aria-label="愛山青少年活動推進財団 ホーム">
+          <span class="site-header__logo-label">一般財団法人</span>
+          <span class="site-header__logo-name">愛山青少年活動推進財団</span>
+        </a>
       </h1>
 
-      <!-- PC用ナビ -->
-      <nav class="site-header__nav">
+      <nav class="site-header__nav" aria-label="メインメニュー">
         <ul class="site-header__nav-list">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="site-header__nav-item site-header__nav-item--home"><a href="/" aria-current="page">ホーム</a></li>
+          <li class="site-header__nav-item site-header__nav-item--about"><a href="#about">財団について</a></li>
+          <li class="site-header__nav-item site-header__nav-item--recruit"><a href="#recruit">助成募集</a></li>
+          <li class="site-header__nav-item site-header__nav-item--groups"><a href="#groups">助成金交付団体</a></li>
+          <li class="site-header__nav-item site-header__nav-item--contact"><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
 
-      <!-- ハンバーガー -->
-      <button class="site-header__menu-btn" type="button" aria-label="メニュー" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="site-header__menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="sp-menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ▼ SP用 展開メニュー -->
-  <nav class="sp-menu" aria-hidden="true">
-    <div class="sp-menu__inner">
-      <ul class="sp-menu__list">
-        <li class="sp-menu__item"><a class="sp-menu__link" href="#">About</a></li>
-        <li class="sp-menu__item"><a class="sp-menu__link" href="#">Service</a></li>
-        <li class="sp-menu__item"><a class="sp-menu__link" href="#">Works</a></li>
-        <li class="sp-menu__item"><a class="sp-menu__link" href="#">Contact</a></li>
-      </ul>
-    </div>
+  <nav class="sp-menu" id="sp-menu" aria-label="メインメニュー" aria-hidden="true" inert>
+    <ul class="sp-menu__list">
+      <li class="sp-menu__item sp-menu__item--home"><a href="/" aria-current="page">ホーム</a></li>
+      <li class="sp-menu__item sp-menu__item--about"><a href="#about">財団について</a></li>
+      <li class="sp-menu__item sp-menu__item--recruit"><a href="#recruit">助成募集</a></li>
+      <li class="sp-menu__item sp-menu__item--groups"><a href="#groups">助成金交付団体</a></li>
+      <li class="sp-menu__item sp-menu__item--contact"><a href="#contact">お問い合わせ</a></li>
+    </ul>
   </nav>
+  <button class="sp-menu__overlay" type="button" aria-label="メニューを閉じる" tabindex="-1" aria-hidden="true"></button>
 
-  <div class="sp-menu__overlay" aria-hidden="true"></div>
-
-  <div class="main page-top" style="height: 800px; background-color: pink;">
-
-  </div>
-  <!--main end-->
-
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <!-- フッターロゴ -->
-      <div class="site-footer__logo">
-        <a href="/">Site Title</a>
-      </div>
-
-      <!-- フッターナビ -->
-      <nav class="site-footer__nav">
-        <ul class="site-footer__nav-list">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <!-- コピーライト -->
-    <div class="site-footer__bottom">
-      <p class="site-footer__copyright">
-        © 2026 Site Title
-      </p>
-    </div>
-  </footer>
+  <main></main>
   <script src="assets/js/main.js"></script>
 </body>
-
 </html>

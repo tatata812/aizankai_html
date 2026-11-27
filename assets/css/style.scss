@@ -123,82 +123,139 @@ header
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 72px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
   z-index: 1000;
+  width: 100%;
+  height: 90px;
+  border-bottom: 2px solid #3478f6;
+  background: #fff;
 
   &__inner {
-    max-width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 24px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: stretch;
   }
 
   &__logo {
-    font-size: 18px;
-    font-weight: 700;
+    display: flex;
+    flex: 0 0 43%;
+    align-items: center;
+    margin: 0;
+    padding: 8px 24px 8px 1.8%;
+    color: #3478f6;
+    line-height: 1.15;
 
     a {
-      color: #222;
+      display: inline-flex;
+      flex-direction: column;
+      color: inherit;
       text-decoration: none;
     }
   }
 
-  /* PCナビ：SPでは非表示 */
+  &__logo-label {
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    letter-spacing: .08em;
+  }
+
+  &__logo-name {
+    margin-top: 2px;
+    font-size: clamp(20px, 1.8vw, 32px);
+    font-weight: 800;
+    letter-spacing: .035em;
+    white-space: nowrap;
+  }
+
   &__nav {
+    flex: 1 1 auto;
+
     @include tab {
       display: none;
     }
   }
 
   &__nav-list {
-    display: flex;
-    gap: 32px;
-
-    a {
-      color: #222;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
-  /* ハンバーガー：SPのみ表示 */
+  &__nav-item {
+    a {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 8px;
+      font-size: clamp(14px, 1.25vw, 23px);
+      white-space: nowrap;
+      transition: filter .2s ease;
+
+      &:hover,
+      &:focus-visible {
+        filter: brightness(.96);
+      }
+    }
+
+    &--home {
+      color: #fff;
+      font-weight: 700;
+
+      a { background: #3478f6; }
+    }
+
+    &--about { color: #19b8b1; background: #e5f7f5; }
+    &--recruit { color: #ff7c19; background: #fff3e7; }
+    &--groups { color: #71c933; background: #f0f8e8; }
+    &--contact { color: #fa5a9b; background: #fff0f6; }
+  }
+
   &__menu-btn {
     display: none;
-    width: 32px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
     position: relative;
-    background: none;
-    border: none;
+    border: 1px solid #3478f6;
+    border-radius: 5px;
+    background: #fff;
     cursor: pointer;
 
     @include tab {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
 
     span {
-      position: absolute;
-      left: 0;
-      width: 100%;
+      width: 22px;
       height: 2px;
-      background: #222;
-      transition: all 0.3s ease;
-
-      &:nth-child(1) { top: 0; }
-      &:nth-child(2) { top: 11px; }
-      &:nth-child(3) { bottom: 0; }
+      background: #3478f6;
+      transition: transform .2s ease, opacity .2s ease;
     }
 
-    &.is-open {
-      span:nth-child(1) { top: 11px; transform: rotate(45deg); }
+    &[aria-expanded="true"] {
+      span:first-child { transform: translateY(8px) rotate(45deg); }
       span:nth-child(2) { opacity: 0; }
-      span:nth-child(3) { bottom: 11px; transform: rotate(-45deg); }
+      span:last-child { transform: translateY(-8px) rotate(-45deg); }
     }
+  }
+
+  @include tab {
+    height: 68px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    &__logo { flex-basis: 38%; padding-left: 16px; }
+    &__logo-name { font-size: clamp(18px, 2.1vw, 25px); }
+    &__nav-item a { padding-inline: 5px; font-size: clamp(12px, 1.55vw, 16px); }
   }
 }
 
@@ -207,83 +264,66 @@ header
 ========================= */
 .sp-menu {
   position: fixed;
-  top: 72px;
+  top: 0;
   right: 0;
-  width: min(360px, 86vw);
-  height: calc(100vh - 72px);
-  background: #fff;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
   z-index: 1100;
-
-  /* PCでは非表示 */
   display: none;
+  width: min(360px, 86vw);
+  height: 100vh;
+  height: 100dvh;
+  padding: 88px 20px 28px;
+  overflow-y: auto;
+  background: #fff;
+  visibility: hidden;
+
+  &.is-open { visibility: visible; }
 
   @include tab {
     display: block;
-  }
-
-  &.is-open {
-    transform: translateX(0);
-  }
-
-  &__inner {
-    height: 100%;
-    padding: 32px 24px;
-    overflow-y: auto;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
   }
 
   &__item {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 16px;
-  }
+    a {
+      display: block;
+      padding: 15px 16px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
 
-  &__link {
-    display: block;
-    color: #222;
-    text-decoration: none;
-    font-weight: 700;
+    &--home a { color: #fff; background: #3478f6; }
+    &--about a { color: #139c96; background: #e5f7f5; }
+    &--recruit a { color: #e76d11; background: #fff3e7; }
+    &--groups a { color: #5ea927; background: #f0f8e8; }
+    &--contact a { color: #df4383; background: #fff0f6; }
   }
 }
 
-/* オーバーレイ */
 .sp-menu__overlay {
   position: fixed;
-  top: 72px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 72px);
-  background: rgba(0, 0, 0, 0.45);
+  inset: 0;
+  z-index: 1050;
+  display: none;
+  border: 0;
+  background: rgb(0 0 0 / 38%);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 1050;
 
-  display: none;
+  &.is-open { visibility: visible; }
 
   @include tab {
     display: block;
   }
-
-  &.is-open {
-    opacity: 1;
-    visibility: visible;
-  }
 }
 
-/* 背景スクロール停止 */
-body.is-sp-menu-open {
-  overflow: hidden;
-}
-
-
-
+body.is-sp-menu-open { overflow: hidden; }
 
 /* =================================
 footer
