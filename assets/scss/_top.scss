@@ -82,9 +82,8 @@
   &__slide {
     display: block;
     padding: 0;
-    opacity: .72;
-    transform: scale(.84);
-    transition: opacity .6s ease, transform .6s ease;
+    opacity: .76;
+    transition: opacity 1.5s ease;
 
     @include tab {
       padding: 0;
@@ -95,18 +94,21 @@
       width: 90%;
       height: auto;
       margin: 0 auto;
+      transform: scale(.86);
+      transition: transform 1.5s cubic-bezier(.65, 0, .35, 1);
     }
 
     &.slick-center {
       opacity: 1;
-      transform: scale(1.16);
+
+      img { transform: scale(1.12); }
 
       @include tab {
-        transform: scale(1.12);
+        img { transform: scale(1.09); }
       }
 
       @include sp {
-        transform: scale(1.08);
+        img { transform: scale(1.07); }
       }
     }
   }

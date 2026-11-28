@@ -3,28 +3,63 @@ $(function () {
   const $menu = $('.sp-menu');
   const $overlay = $('.sp-menu__overlay');
   const $slider = $('.mainvisual__slider');
+  const hasGsap = typeof window.gsap !== 'undefined';
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // メインビジュアルの中央寄せスライダー
   if ($slider.length && $.fn.slick) {
+    const sliderSpeed = 1500;
+    const scaleForViewport = () => window.innerWidth <= 600 ? 1.07 : window.innerWidth <= 820 ? 1.09 : 1.12;
+    const syncSlideEmphasis = (slick, index, animate) => {
+      const slideCount = slick.slideCount;
+      const activeIndex = ((index % slideCount) + slideCount) % slideCount;
+      const $trackSlides = $(slick.$slideTrack).children('.slick-slide');
+      const centerScale = scaleForViewport();
+
+      $trackSlides.each(function () {
+        const slideIndex = Number(this.getAttribute('data-slick-index'));
+        const logicalIndex = ((slideIndex % slideCount) + slideCount) % slideCount;
+        const isActive = logicalIndex === activeIndex;
+        const $image = $(this).find('img');
+        const scale = isActive ? centerScale : .86;
+        const opacity = isActive ? 1 : .76;
+
+        if (!hasGsap || prefersReducedMotion || !animate) {
+          if (hasGsap) {
+            gsap.set(this, { opacity });
+            gsap.set($image, { scale });
+          }
+          return;
+        }
+
+        gsap.to(this, { opacity, duration: sliderSpeed / 1000, ease: 'power2.inOut', overwrite: 'auto' });
+        gsap.to($image, { scale, duration: sliderSpeed / 1000, ease: 'power2.inOut', overwrite: 'auto' });
+      });
+    };
+
+    if (hasGsap) {
+      $slider.on('init', (event, slick) => syncSlideEmphasis(slick, slick.currentSlide, false));
+      $slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => syncSlideEmphasis(slick, nextSlide, true));
+    }
+
     $slider.slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       centerMode: true,
       centerPadding: '28%',
       autoplay: true,
-      autoplaySpeed: 4500,
-      speed: 700,
+      autoplaySpeed: 4200,
+      speed: sliderSpeed,
+      cssEase: 'cubic-bezier(0.65, 0, 0.35, 1)',
       arrows: false,
       dots: false,
-      pauseOnHover: true,
+      pauseOnHover: false,
       pauseOnFocus: true
     });
   }
 
   const $newsCategories = $('.news__category');
   const $newsItems = $('.news__item');
-  const hasGsap = typeof window.gsap !== 'undefined';
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // トップページの表示アニメーション
   if ($slider.length && hasGsap && !prefersReducedMotion) {
